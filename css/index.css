@@ -30,12 +30,18 @@ body,html {
 }
 
 #main{
-	width:950px;
-	height:460px;
-	position:relative;
-	left:50%;
-	margin-left:-475px;
-    margin-top:1%;
+position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:950px;
+    height:460px;
+	/*position:relative;*/
+	/*left:50%;*/
+	/*margin-left:-475px;*/
+    /*margin-top:1%;*/
 	background:#39f;
 }
 .mindiv{
@@ -64,12 +70,6 @@ body,html {
 	top:0px;
 	left:0px;
 }
-#min_1 #box1{
-	background:url(../images/1-1.png) 0px 0px;
-}
-#min_1 #box2{
-	background:url(../images/1-1.png) 0px 0px;
-}
 #min_2{
 	width:290px;
 	height:270px;
@@ -77,24 +77,13 @@ body,html {
 	top:0px;
 	left:150px;
 }
-#min_2 #box1{
-	background:url(../images/2-1.png) 0px 0px;
-}
-#min_2 #box2{
-	background:url(../images/2-1.png) 0px 0px;
-}
+
 #min_3{
 	width:245px;
 	height:135px;
 	background:#2DC3C2;
 	top:0px;
 	left:340px;
-}
-#min_3 #box1{
-	background:url(../images/3-1.png) 0px 0px;
-}
-#min_3 #box2{
-	background:url(../images/3-1.png) 0px 0px;
 }
 #min_4{
 	width:245px;
@@ -103,24 +92,12 @@ body,html {
 	top:135px;
 	left:340px;
 }
-#min_4 #box1{
-	background:url(../images/4-1.png) 0px 0px;
-}
-#min_4 #box2{
-	background:url(../images/4-1.png) 0px 0px;
-}
 #min_5{
 	width:180px;
 	height:135px;
 	background:#F0640F;
 	top:0px;
 	left:585px;
-}
-#min_5 #box1{
-	background:url(../images/5-1.png) 0px 0px;
-}
-#min_5 #box2{
-	background:url(../images/5-1.png) 0px 0px;
 }
 #min_6{
 	width:180px;
@@ -129,24 +106,12 @@ body,html {
 	top:135px;
 	left:585px;
 }
-#min_6 #box1{
-	background:url(../images/6-1.png) 0px 0px;
-}
-#min_6 #box2{
-	background:url(../images/6-1.png) 0px 0px;
-}
 #min_7{
 	width:185px;
 	height:185px;
 	background:#06B6A1;
 	top:0px;
 	left:765px;
-}
-#min_7 #box1{
-	background:url(../images/7-1.png) 0px 0px;
-}
-#min_7 #box2{
-	background:url(../images/7-1.png) 0px 0px;
 }
 #min_8{
 	width:150px;
@@ -155,24 +120,12 @@ body,html {
 	top:230px;
 	left:0px;
 }
-#min_8 #box1{
-	background:url(../images/8-1.png) 0px 0px;
-}
-#min_8 #box2{
-	background:url(../images/8-1.png) 0px 0px;
-}
 #min_9{
 	width:250px;
 	height:190px;
 	background:#8F8669;
 	top:270px;
 	left:150px;
-}
-#min_9 #box1{
-	background:url(../images/9-1.png) 0px 0px;
-}
-#min_9 #box2{
-	background:url(../images/9-1.png) 0px 0px;
 }
 #min_10{
 	width:185px;
@@ -181,12 +134,6 @@ body,html {
 	top:270px;
 	left:400px;
 }
-#min_10 #box1{
-	background:url(../images/10-1.png) 0px 0px;
-}
-#min_10 #box2{
-	background:url(../images/10-1.png) 0px 0px;
-}
 #min_11{
 	width:180px;
 	height:190px;
@@ -194,22 +141,10 @@ body,html {
 	top:270px;
 	left:585px;
 }
-#min_11 #box1{
-	background:url(../images/11-1.png) 0px 0px;
-}
-#min_11 #box2{
-	background:url(../images/11-1.png) 0px 0px;
-}
 #min_12{
 	width:185px;
 	height:275px;
 	background:#CB266B;
 	top:185px;
 	left:765px;
-}
-#min_12 #box1{
-	background:url(../images/12-1.png) 0px 0px;
-}
-#min_12 #box2{
-	background:url(../images/12-1.png) 0px 0px;
 }

@@ -15,9 +15,9 @@ function RandomImg(where, sub) {
 
 for (var i = 1; i <= image_count; i++) {
     for (var j = 1; j <= 2; j++) {
-        var img = RandomImg(i, j);
-        var box = 'box'+i+'-'+ j;
-        var div = document.getElementById(box);
+        img = RandomImg(i, j);
+        box = 'box'+i+'-'+ j;
+        div = document.getElementById(box);
         div.style.background = "url(" + img + ")";
     };
 };

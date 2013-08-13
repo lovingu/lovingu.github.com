@@ -18,12 +18,17 @@
 	<script id="jquery_183" type="text/javascript" class="library" src="js/index.js"></script>
     <link rel="stylesheet" href="css/index.css" />
     <link href='http://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 
 <body>
 <div class="lovebox">
     <h1>Love Box</h1>
-    <i>12.21<sup>st</sup> ~ Forever </i>
+    <div class="lovebox_inner">
+        <i><p id="weather2"></p>12.21<sup>st</sup> ~ Forever <p id="weather"></p></i>
+    </div>
 </div>
 <div id="main">
   <li id="min_1" class="mindiv" value="0">
@@ -66,7 +71,9 @@
   </li>
   <li id="min_7" class="mindiv" value="0">
     <div class="divbox">
-      <div id="box7-1" class="boxone"></div>
+      <a href="http://lover.herokuapp.com">
+        <div id="box7-1" class="boxone"></div>
+      </a>
       <div id="box7-2" class="boxtwo"></div>
     </div>
   </li>
@@ -104,5 +111,20 @@
   </li>
 </div>
 <script id="jquery_183" type="text/javascript" class="library" src="js/random.js"></script>
+<script type="text/javascript">
+    jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",
+        function(){
+            var nj = v.find('南京').w.split("<br/>");
+            <!--var nj_weather = nj[1].split(':')[1];-->
+            var nj_tmp = nj[2].split(':')[1];
+            <!--var cd = v.find('成都').w.split("<br/>");-->
+            <!--var cd_weather = cd[1].split(':')[1];-->
+            <!--var cd_tmp = cd[2].split(':')[1];-->
+            document.getElementById('weather').innerHTML = nj_tmp;
+            <!--document.getElementById('weather').innerHTML = nj_tmp + '<br/>' + nj_weather;-->
+            <!--document.getElementById('weather2').innerHTML = cd_tmp + '<br/>' + cd_weather;-->
+            <!--document.getElementById('weather2').innerHTML = cd_tmp + '<br/>' + cd_weather;-->
+    });
+</script>
 </body>
 </html>

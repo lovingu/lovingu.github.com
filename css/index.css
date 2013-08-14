@@ -31,17 +31,17 @@ body,html {
 
 #main{
 position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+    /*top:0;*/
+    /*bottom:0;*/
+    /*left:0;*/
+    /*right:0;*/
     margin:auto;
     width:950px;
     height:460px;
-	/*position:relative;*/
-	/*left:50%;*/
-	/*margin-left:-475px;*/
-    /*margin-top:1%;*/
+    position:relative;
+    left:50%;
+    margin-left:-475px;
+    margin-top:1%;
 	background:#39f;
 }
 .mindiv{

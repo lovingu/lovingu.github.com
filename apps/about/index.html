@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>About Love Home</title>
+       <link rel="shortcut icon" href="/static/favicon1.ico">
+        <link href='http://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Henny+Penny' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Ewert' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        h1 {
+            font-family: 'Hanalei', cursive;
+        }
+        h3 {
+            font-family: 'Ewert', cursive;
+        }
+        p {
+            font-family: 'Henny Penny', cursive;
+        }
+    </style>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+        <![endif]-->
+        <!-- jQuery -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <!-- jmpress plugin -->
+        <script type="text/javascript" src="js/jmpress.min.js"></script>
+        <!-- jmslideshow plugin : extends the jmpress plugin -->
+        <script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+        <noscript>
+            <style>
+            .step {
+                width: 100%;
+                position: relative;
+            }
+            .step:not(.active) {
+                opacity: 1;
+                filter: alpha(opacity=99);
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+            }
+            .step:not(.active) a.jms-link{
+                opacity: 1;
+                margin-top: 40px;
+            }
+            </style>
+        </noscript>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Codrops top bar -->
+            <header>
+            <h1>About <span> <a href="/index.html">Love Home</a></span></h1>
+            </header>
+            <section id="jms-slideshow" class="jms-slideshow">
+                <div class="step" data-color="color-2">
+                    <div class="jms-content">
+                        <h3>What</h3>
+                        <p>A place full of my love to my girl friend (●'◡'●)ﾉ♥</p>
+                    </div>
+                    <img src="images/1.png" />
+                </div>
+                <div class="step" data-color="color-3" data-y="900" data-rotate-x="80">
+                    <div class="jms-content">
+                        <h3>Why</h3>
+                    <p>Ya, I am a coder, I take it as a suprise (╭￣3￣)╭♡</p>
+                    </div>
+                    <img src="images/2.png" />
+                </div>
+                <div class="step" data-color="color-4" data-x="-100" data-z="1500" data-rotate="170">
+                    <div class="jms-content">
+                        <h3>When</h3>
+                    <p>When I am aware of how much I love her :) </p>
+                    </div>
+                    <img src="images/3.png" />
+                </div>
+                <div class="step" data-color="color-5" data-x="3000">
+                    <div class="jms-content">
+                        <h3>How</h3>
+                            <p>Idea && Google && Vim</p>
+                    </div>
+                    <img src="images/4.png" />
+                </div>
+                <div class="step" data-color="color-1" data-x="4500" data-z="1000" data-rotate-y="45">
+                    <div class="jms-content">
+                        <h3>More</h3>
+                            <p>More boxes are coming...</p>
+                    </div>
+                    <img src="images/5.png" />
+                </div>
+            </section>
+        </div>
+        <script type="text/javascript">
+            $(function() {
+
+                var jmpressOpts    = {
+                    animation        : { transitionDuration : '0.8s' }
+                };
+
+                $( '#jms-slideshow' ).jmslideshow( $.extend( true, { jmpressOpts : jmpressOpts }, {
+                    autoplay    : true,
+                    bgColorSpeed: '0.8s',
+                    arrows        : false
+                }));
+
+            });
+        </script>
+    </body>
+</html>

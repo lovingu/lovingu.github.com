@@ -18,6 +18,9 @@
 	<script id="jquery_183" type="text/javascript" class="library" src="js/index.js"></script>
     <link rel="stylesheet" href="css/index.css" />
     <link href='http://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Jim+Nightshade' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Henny+Penny' rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Ewert' rel='stylesheet' type='text/css'>-->
     <!--[if lt IE 9]>
        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -27,8 +30,9 @@
 <div class="lovebox">
     <h1>Love Box</h1>
     <div class="lovebox_inner">
-        <i><p id="weather2"></p>12.21<sup>st</sup> ~ Forever <p id="weather"></p></i>
+        <i><p id="weather2"></p><p id="weather"></p></i>
     </div>
+    <div id="testa"></div>
 </div>
 <div id="main">
   <li id="min_1" class="mindiv" value="0">
@@ -101,8 +105,7 @@
     <div class="divbox">
       <div id="box11-1" class="boxone"></div>
       <div id="box11-2" class="boxtwo"></div>
-    </div>
-  </li>
+    </divG  </li>
   <li id="min_12" class="mindiv" value="0">
     <div class="divbox">
       <div id="box12-1" class="boxone"></div>
@@ -112,13 +115,15 @@
     </div>
   </li>
 </div>
+
+<div id="footer"> </div>
 <script id="jquery_183" type="text/javascript" class="library" src="js/random.js"></script>
 <script type="text/javascript">
     jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",
         function(){
             var nj = v.find('南京').w.split("<br/>");
             <!--var nj_weather = nj[1].split(':')[1];-->
-            var nj_tmp = nj[2].split(':')[1];
+            var nj_tmp = nj[2].split(':')[1].replace('～', ' ~ ');
             <!--var cd = v.find('成都').w.split("<br/>");-->
             <!--var cd_weather = cd[1].split(':')[1];-->
             <!--var cd_tmp = cd[2].split(':')[1];-->
@@ -127,6 +132,23 @@
             <!--document.getElementById('weather2').innerHTML = cd_tmp + '<br/>' + cd_weather;-->
             <!--document.getElementById('weather2').innerHTML = cd_tmp + '<br/>' + cd_weather;-->
     });
+    
+    function getFooter() {
+        var theYear = 2013;
+        var mdate = new Date();
+        var year  = mdate.getFullYear();
+        var author = " Proudly powered by @Yiming";
+        if (year == theYear) {
+            str = "© "+ theYear;
+        }
+        else if (year > theYear) {
+            str = "© " + theYear + " ~ " + year;
+        }
+        return str + author;
+        <!--document.writeln(str);-->
+        <!--document.writeln(" Proudly powered by @Zuckonit");-->
+    }
+    document.getElementById('footer').innerHTML = getFooter() + " [12.21<sup>st</sup> 2012 ~ Forever]" ;
 </script>
 </body>
 </html>

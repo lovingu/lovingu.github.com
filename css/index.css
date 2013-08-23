@@ -23,10 +23,20 @@ body,html {
 
 .lovebox {
     position: relative;
-    margin-top:2%;
+    /*margin-top:1%;*/
     text-align: center;
     font-family: 'Hanalei', cursive;
     font-size:30px;
+}
+
+#footer {
+    position: relative;
+    margin-top:2%;
+    text-align: center;
+    /*font-family: 'Ewert', cursive;*/
+    /*font-family: 'Henny Penny', cursive;*/
+    font-family: 'Jim Nightshade', cursive;
+    font-size:22px;
 }
 
 #main{

@@ -34,6 +34,10 @@ body,html {
     /*height:560px;*/
     position:relative;
 }
+
+#weekday, #whichday {
+    font-family: 'Hanalei', cursive;
+}
 .lovebox {
     position: relative;
     /*margin-top:2%;*/

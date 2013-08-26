@@ -23,6 +23,17 @@ body,html {
 	height:100%;
 }
 
+.floater {
+    float:left;
+    height:2%;
+    margin-bottom:-120px;
+}
+
+#boxisbox {
+    clear:both;
+    /*height:560px;*/
+    position:relative;
+}
 .lovebox {
     position: relative;
     /*margin-top:2%;*/

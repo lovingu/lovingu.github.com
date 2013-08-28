@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title></title>
+        <title>Counter Box</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="box_title">
+            <span>Counter Box</span>
+        </div>
+        <div id="wrapping">
+            <div id="clock-ticker" class="clearfix">
+                <div class="block">
+                    <span class="flip-top" id="numdays"></span>
+                    <span class="flip-btm"></span>
+                    <footer class="label">Days</footer>
+                </div>
+
+                <div class="block">
+                    <span class="flip-top" id="numhours"></span>
+                    <span class="flip-btm"></span>
+                    <footer class="label">Hours</footer>
+                </div>
+
+                <div class="block">
+                    <span class="flip-top" id="nummins"></span>
+                    <span class="flip-btm"></span>
+                    <footer class="label">Mins</footer>
+                </div>
+
+                <div class="block">
+                    <span class="flip-top" id="numsecs"></span>
+                    <span class="flip-btm"></span>
+                    <footer class="label">Secs</footer><br>
+                </div>
+            </div>
+        </div>
+
+        <!--<script type="text/javascript">-->
+            <!--$(document).ready(function(){-->
+                    <!--var theDaysBox  = $("#numdays");-->
+                    <!--var theHoursBox = $("#numhours");-->
+                    <!--var theMinsBox  = $("#nummins");-->
+                    <!--var theSecsBox  = $("#numsecs");-->
+
+                    <!--var refreshId = setInterval(function() {-->
+                        <!--var currentSeconds = theSecsBox.text();-->
+                        <!--var currentMins    = theMinsBox.text();-->
+                        <!--var currentHours   = theHoursBox.text();-->
+                        <!--var currentDays    = theDaysBox.text();-->
+
+                        <!--if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {-->
+                        <!--// if everything rusn out our timer is done!!-->
+                        <!--// do some exciting code in here when your countdown timer finishes-->
+
+                        <!--} else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {-->
+                        <!--// if the seconds and minutes and hours run out we subtract 1 day-->
+                        <!--theDaysBox.html(currentDays-1);-->
+                        <!--theHoursBox.html("23");-->
+                        <!--theMinsBox.html("59");-->
+                        <!--theSecsBox.html("59");-->
+                        <!--} else if(currentSeconds == 0 && currentMins == 0) {-->
+                        <!--// if the seconds and minutes run out we need to subtract 1 hour-->
+                        <!--theHoursBox.html(currentHours-1);-->
+                        <!--theMinsBox.html("59");-->
+                        <!--theSecsBox.html("59");-->
+                        <!--} else if(currentSeconds == 0) {-->
+                            <!--// if the seconds run out we need to subtract 1 minute-->
+                                <!--theMinsBox.html(currentMins-1);-->
+                                <!--theSecsBox.html("59");-->
+                                <!--} else {-->
+                                    <!--theSecsBox.html(currentSeconds-1);-->
+                                        <!--}-->
+                                        <!--}, 1000);-->
+                                        <!--});-->
+                                        <!--</script>-->
+
+        </body>
+    <script type="text/javascript">
+        jQuery(document).ready(function (){
+        var now = new Date();
+        var dst = new Date("2013-10-1 0:0:0");
+        var diff = (dst.getTime() - now.getTime());
+        var d = diff / 8640000;
+        alert(d);
+        var h = diff / (8640000 * 24);
+        var m = diff / (8640000 * 24 * 60);
+        var s = diff / (8640000 * 24 * 3600);
+        document.getElementById('numdays').innerHTML = d;
+        document.getElementById('numhours').innerHTML = h;
+        document.getElementById('nummins').innerHTML = m;
+        document.getElementById('numsecs').innerHTML = s;
+    )};
+</script>
+    </html>

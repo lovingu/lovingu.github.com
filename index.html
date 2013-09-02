@@ -136,7 +136,9 @@
 <script id="jquery_183" type="text/javascript" class="library" src="js/random.js"></script>
 <script type="text/javascript">
     function jsonCallback(result) {
-        document.getElementById('wordtoday').innerHTML = "["+ result[0].word + "]";
+        var len = result.length;
+        var i = Math.floor(Math.random()*len);//0-23 
+        document.getElementById('wordtoday').innerHTML = "["+ result[i].word + "]";
     }
 </script>
 <script type="text/javascript" src="http://lover.herokuapp.com/pieces.json?callback=jsonCallback"></script>

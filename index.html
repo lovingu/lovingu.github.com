@@ -9,7 +9,6 @@
     <link type="text/css" href="assets/css/styles2.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet' type='text/css'>
     <script src="http://dict.cn/hc/" type="text/javascript"></script>
-    <!--<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:800,300|Abel|Roboto+Condensed:300,700' rel="stylesheet" />-->
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -98,22 +97,19 @@
                     <!-- ## start ROW 3 ## -->
                     <div class="row row-style">
                         <!-- ## PROGRESS TILE begins here ## -->
-                        <div class="span4 col r3c1">
-                            <a href="/apps/timeline">
-                                <p>Timeline <span id="progress-status"></span></p>
-                            </a>
-                        </div>
+                        <a href="/apps/timeline">
+                            <div class="span4 col r3c1">
+                                <p>Timeline</p>
+                            </div>
+                        </a>
                         <!-- ## PROGRESS TILE ends here ## -->
 
                         <!-- ## OUR TEAM TILE begins here ## -->
-                        <div class="span4 col r1c2">
-                            <!--<div class="our-team">-->
-                                <!--<h3>Story</h3>-->
-                                <a href="/apps/story">
-                                    <p>Story</span></p>
-                                </a>
-                            <!--</div>-->
-                        </div>
+                        <a href="/apps/story">
+                            <div class="span4 col r1c2">
+                                <p>Story</span></p>
+                            </div>
+                        </a>
                         <!-- ## OUR TEAM TILE ends here ## -->
 
                         <!-- ## TEAM MEMBERS SLIDER TILE begins here ## -->
@@ -177,13 +173,6 @@
 
     <!-- ## SUBSCRIBE MESSAGE POPUP begins here ## -->
     <!-- ## do not change it. ## -->
-    <div id="subscribe_modal" class="modal hide fade">
-        <div class="modal-body">
-            <div id="subscribe_form_message"></div>
-            <a href="preview2.html#" data-dismiss="modal" aria-hidden="true" class="btn">Close</a>
-        </div>
-    </div>
-    <!-- ## CONTACT US MODAL POPUP begins here ## -->
 
     <script type="text/javascript" src="assets/js/jquery-2.0.0.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -200,7 +189,7 @@
     }
     </script>
 
- <script type="text/javascript">
+         <script type="text/javascript">
             <!--jQuery(document).ready(function (){-->
                     var now = new Date();
                     var dst = new Date("2013/10/01 00:00:00");
@@ -219,7 +208,7 @@
                     <!--)};-->
             </script>
             <script type="text/javascript">
-                $(document).ready(function(){
+                jQuery(document).ready(function(){
                         var theDaysBox  = $("#numdays");
                         var theHoursBox = $("#numhours");
                         var theMinsBox  = $("#nummins");

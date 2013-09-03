@@ -1,0 +1,195 @@
+<!--=============================================================================
+#     FileName: index.html
+#         Desc:
+#       Author: Mocker
+#        Email: Zuckerwooo@gmail.com
+#     HomePage: zuckonit.github.com
+#      Version: 0.0.1
+#   LastChange: 2013-08-13 22:56:51
+#      History:
+=============================================================================-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" href="/static/favicon1.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Love Home</title>
+    <script id="jquery_183" type="text/javascript" class="library" src="js/jquery-1.8.3.min.js"></script>
+    <script id="jquery_183" type="text/javascript" class="library" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link href='http://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Jim+Nightshade' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Henny+Penny' rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Ewert' rel='stylesheet' type='text/css'>-->
+    <!--[if lt IE 9]>
+       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.8.13/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sidebar.js"></script>
+    <script src="http://dict.cn/hc/" type="text/javascript"></script>
+</head>
+
+<body>
+<ul id="demo_menu1" >
+    <!--<li id="lunar">日期</li>-->
+    <li id="weekday">星期几</li>
+    <li id="whichday">第几天</li>
+    <li id="wordtoday">今日词汇</li>
+    <li id="weather_nj">南京</li>
+    <li id="weather_cd">成都</li>
+    <!--<li><a href="#" >More</a></li>-->
+</ul>
+<div class="floater"></div>
+<div id="boxisbox">
+    <div class="lovebox">
+        <h1>Love Box</h1>
+        <i><p id="weather2"></p><p id="weather"></p></i>
+        <div id="testa"></div>
+    </div>
+    <div id="main">
+      <li id="min_1" class="mindiv" value="0">
+        <div class="divbox" value="0">
+          <div id="box1-1" class="boxone"></div>
+          <a href="/apps/timeline/index.html">
+              <div id="box1-2" class="boxtwo"></div>
+          </a>
+        </div>
+      </li>
+      <li id="min_2" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box2-1" class="boxone"></div>
+          <div id="box2-2" class="boxtwo"></div>
+        </div>
+      </li>
+      <li id="min_3" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box3-1" class="boxone"></div>
+          <div id="box3-2" class="boxtwo"></div>
+        </div>
+      </li>
+      <li id="min_4" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box4-1" class="boxone"></div>
+          <div id="box4-2" class="boxtwo"></div>
+        </div>
+      </li>
+      <li id="min_5" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box5-1" class="boxone"></div>
+          <div id="box5-2" class="boxtwo"></div>
+        </div>
+      </li>
+      <li id="min_6" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box6-1" class="boxone"></div>
+          <div id="box6-2" class="boxtwo"></div>
+        </div>
+      </li>
+      <li id="min_7" class="mindiv" value="0">
+        <div class="divbox">
+          <a href="http://lover.herokuapp.com">
+            <div id="box7-1" class="boxone"></div>
+          </a>
+          <div id="box7-2" class="boxtwo"></div>
+        </div>
+      </li>
+      <li id="min_8" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box8-1" class="boxone"></div>
+          <a href="/apps/story/index.html">
+              <div id="box8-2" class="boxtwo"></div>
+          </a>
+        </div>
+      </li>
+      <li id="min_9" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box9-1" class="boxone"></div>
+          <a href="/apps/counter/index.html">
+              <div id="box9-2" class="boxtwo"></div>
+          </a>
+        </div>
+      </li>
+      <li id="min_10" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box10-1" class="boxone"></div>
+          <div id="box10-2" class="boxtwo"></div>
+        </div>
+      </li>
+      <li id="min_11" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box11-1" class="boxone"></div>
+          <div id="box11-2" class="boxtwo"></div>
+        </divG  </li>
+      <li id="min_12" class="mindiv" value="0">
+        <div class="divbox">
+          <div id="box12-1" class="boxone"></div>
+          <a href="/apps/about/index.html">
+            <div id="box12-2" class="boxtwo"></div>
+          </a>
+        </div>
+      </li>
+    </div>
+</div>
+<div id="footer"> </div>
+<script id="jquery_183" type="text/javascript" class="library" src="js/random.js"></script>
+<script type="text/javascript">
+    function jsonCallback(result) {
+        var len = result.length;
+        var i = Math.floor(Math.random()*len);//0-23 
+        document.getElementById('wordtoday').innerHTML = "["+ result[i].word + "]";
+    }
+</script>
+<script type="text/javascript" src="http://lover.herokuapp.com/pieces.json?callback=jsonCallback"></script>
+<script type="text/javascript" src="js/mysidebar.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    <!--document.getElementById('lunar').innerHTML = getCurdayLunar();-->
+    if(isBirthday() == 1) {
+        alert("今天是Yiming的生日, 别忘了哦");
+        location.href="http://tmall.com";
+    } 
+    if(isBirthday() == 2) {
+        alert("今天是Yanting的生日, 别忘了哦");
+        location.href="http://tmall.com";
+    }
+    document.getElementById('weekday').innerHTML = '第' + getWhichWeek() + "周 ~ " + getWeekDay();
+    document.getElementById('whichday').innerHTML = "在一起" + getHowManyDays() + "天了";
+});
+    
+</script>
+<script type="text/javascript">
+    $("ul#demo_menu1").sidebar();
+    jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",
+        function(){
+            var nj = v.find('南京').w.split("<br/>");
+            var nj_weather = nj[1].split(':')[1];
+            var nj_tmp = nj[2].split(':')[1].replace('～', ' ~ ');
+            var cd = v.find('成都').w.split("<br/>");
+            var cd_weather = cd[1].split(':')[1];
+            <!--var cd_tmp = cd[2].split(':')[1];-->
+            document.getElementById('weather').innerHTML = nj_tmp;
+            document.getElementById('weather_nj').innerHTML = '[南京]' + nj_weather;
+            document.getElementById('weather_cd').innerHTML = '[成都]' + cd_weather;
+    });
+
+    <!--whichDay();-->
+
+    jQuery(document).ready(function() {
+        var theYear = 2013;
+        var mdate = new Date();
+        var year  = mdate.getFullYear();
+        var author = " Proudly powered by @Yiming ｡◕‿◕｡ @Yanting ";
+        if (year == theYear) {
+            str = "© "+ theYear;
+        }
+        else if (year > theYear) {
+            str = "© " + theYear + " ~ " + year;
+        }
+        footer =  str + author + "[ 12.21<sup>st</sup> 2012 ~ Forever ]";
+        document.getElementById('footer').innerHTML = footer;
+    });
+</script>
+</body>
+</html>

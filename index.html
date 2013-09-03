@@ -1,166 +1,263 @@
-<!--=============================================================================
-#     FileName: index.html
-#         Desc:
-#       Author: Mocker
-#        Email: Zuckerwooo@gmail.com
-#     HomePage: zuckonit.github.com
-#      Version: 0.0.1
-#   LastChange: 2013-08-13 22:56:51
-#      History:
-=============================================================================-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link rel="shortcut icon" href="/static/favicon1.png" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Love Home</title>
-    <script id="jquery_183" type="text/javascript" class="library" src="js/jquery-1.8.3.min.js"></script>
-    <script id="jquery_183" type="text/javascript" class="library" src="js/index.js"></script>
-    <link rel="stylesheet" href="css/index.css" />
+    <title>Love Home</title>
+    <link rel="shortcut icon" href="/static/favicon1.png" />
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/styles2.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Hanalei' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Jim+Nightshade' rel='stylesheet' type='text/css'>
-    <!--<link href='http://fonts.googleapis.com/css?family=Henny+Penny' rel='stylesheet' type='text/css'>-->
-    <!--<link href='http://fonts.googleapis.com/css?family=Ewert' rel='stylesheet' type='text/css'>-->
-    <!--[if lt IE 9]>
-       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.8.13/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.sidebar.js"></script>
     <script src="http://dict.cn/hc/" type="text/javascript"></script>
-</head>
+    <!--<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:800,300|Abel|Roboto+Condensed:300,700' rel="stylesheet" />-->
 
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
 <body>
-<ul id="demo_menu1" >
-    <!--<li id="lunar">日期</li>-->
-    <li id="weekday">星期几</li>
-    <li id="whichday">第几天</li>
-    <li id="wordtoday">今日词汇</li>
-    <li id="weather_nj">南京</li>
-    <li id="weather_cd">成都</li>
-    <!--<li><a href="#" >More</a></li>-->
-</ul>
-<div class="floater"></div>
-<div id="boxisbox">
-    <div class="lovebox">
-        <h1>Love Box</h1>
-        <i><p id="weather2"></p><p id="weather"></p></i>
-        <div id="testa"></div>
+    <div id="main-container" class="container">
+        <div id="wrapper">
+            <header>
+                <!-- ## start header ## -->
+                <div id="header">
+                    <div class="row">
+                        <div class="span12 col logo">
+                            <h1>Love <a href="/apps/old">Home</a></h1> </div>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div id="section">
+                    <!-- ## start ROW 1 ## -->
+                    <div class="row row-style">
+                        <div class="span4 col r1c1">
+                            <p class="week">
+                                <span id="weekday">第35周星期二</span> <span id="wordtoday">今日单词</span>
+                            </p>
+                        </div>
+                        <div id="counter">
+                            <div class="span2 col r1c2">
+                                <p id="numdays"></p>
+                            </div>
+                            <div class="span2 col r1c3">
+                                <p id="numhours"></p>
+                            </div>
+                            <div class="span2 col r1c4">
+                                <p id="nummins"></p>
+                            </div>
+                            <div class="span2 col r1c5">
+                                <p id="numsecs"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ## end ROW 1 ## -->
+
+                    <!-- ## start ROW 2 ## -->
+                    <div class="row row-style">
+                        <!-- ## SUBSCRIBE TILE begins here ## -->
+                        <div class="span8 col r2c1">
+                            <div class="subscribe-container">
+                                <div class="row-fluid">
+                                    <div class="span10 offset1">
+                                        <form id="frm-subscriber" name="frm-subscriber" action="http://dict.cn/" method="get">
+                                            <div class="row-fluid">
+                                                <div class="control-group">
+                                                    <label class="control-label" for="txt_subscriber_email">: )</label>
+                                                    <div class="controls">
+                                                        <input class="span10 input-subscribe" type="text" placeholder="enter the word you wanna know" />
+                                                        <button id="btn_subscribe" class="btn btn-submit" type="button">Go</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ## SUBSCRIBE TILE ends here ## -->
+
+                        <!-- ## ABOUT US TILE begins here ## -->
+                        <div class="span4 col r1c4">
+                            <div class="about-us">
+                                <p id="nj_weather">天气</p>
+                                <!--<p id="nj_temp">温度</p>-->
+                                <p id="cd_weather">天气</p>
+                                <!--<p id="cd_temp">温度</p>-->
+                                <!--<h3>Weather</h3>-->
+                                <!--<p id="weather_like">-->
+                                    <!--weather here-->
+                                <!--</p>-->
+                            </div>
+                        </div>
+                        <!-- ## ABOUT US TILE ends here ## -->
+                    </div>
+                    <!-- ## end ROW 2 ## -->
+
+                    <!-- ## start ROW 3 ## -->
+                    <div class="row row-style">
+                        <!-- ## PROGRESS TILE begins here ## -->
+                        <div class="span4 col r3c1">
+                            <a href="/apps/timeline">
+                                <p>Timeline <span id="progress-status"></span></p>
+                            </a>
+                        </div>
+                        <!-- ## PROGRESS TILE ends here ## -->
+
+                        <!-- ## OUR TEAM TILE begins here ## -->
+                        <div class="span4 col r1c2">
+                            <!--<div class="our-team">-->
+                                <!--<h3>Story</h3>-->
+                                <a href="/apps/stroy">
+                                    <p>Story</span></p>
+                                </a>
+                            <!--</div>-->
+                        </div>
+                        <!-- ## OUR TEAM TILE ends here ## -->
+
+                        <!-- ## TEAM MEMBERS SLIDER TILE begins here ## -->
+                        <div class="span2 col r3c3">
+                            <div id="myCarousel" class="carousel slide">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item">
+                                        <img src="assets/head/1.jpg" />
+                                        <div class="carousel-caption">
+                                            Zuckonit
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/head/2.jpg" />
+                                        <div class="carousel-caption">
+                                            Yanting
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Carousel nav -->
+                            </div>
+                        </div>
+                        <!-- ## TEAM MEMBERS SLIDER TILE ends here ## -->
+
+                        <!-- ## CONTACT US TILE begins here ## -->
+                        <div class="span2 col r3c1">
+                            <a href="/apps/about">
+                                <p>About</span></p>
+                            </a>    
+                        </div>
+                        <!-- ## CONTACT US TILE ends here ## -->
+                    </div>
+                    <!-- ## end ROW 3 ## -->
+
+                    <!-- ## start ROW 4 ## -->
+                    <!--<div class="row row-style">-->
+                        <!--<div id="facebook-page" class="span2 col r4c1"></div>-->
+                        <!--<div id="twitter-page" class="span2 col r4c2"></div>-->
+                        <!--<div id="googleplus-page" class="span2 col r4c3"></div>-->
+                        <!--<div id="pinterest-page" class="span2 col r4c4"></div>-->
+                        <!--<div id="youtube-page" class="span2 col r4c5"></div>-->
+                        <!--<div id="vimeo-page" class="span2 col r4c6"></div>-->
+                    <!--</div>-->
+                    <!-- ## end ROW 4 ## -->
+                </div>
+            </section>
+            <footer>
+                <!-- ## start footer ## -->
+                <div id="footer">
+                    <div class="row">
+                        <div class="span12 col" id="footerinner">
+                            <!--&copy; 2013 lovingu.github.com -  All rights reserved.-->
+                        </div>
+                    </div>
+                </div>
+                <!-- ## end footer ## -->
+            </footer>
+        </div>
     </div>
-    <div id="main">
-      <li id="min_1" class="mindiv" value="0">
-        <div class="divbox" value="0">
-          <div id="box1-1" class="boxone"></div>
-          <a href="/apps/timeline/index.html">
-              <div id="box1-2" class="boxtwo"></div>
-          </a>
+
+    <!-- ## SUBSCRIBE MESSAGE POPUP begins here ## -->
+    <!-- ## do not change it. ## -->
+    <div id="subscribe_modal" class="modal hide fade">
+        <div class="modal-body">
+            <div id="subscribe_form_message"></div>
+            <a href="preview2.html#" data-dismiss="modal" aria-hidden="true" class="btn">Close</a>
         </div>
-      </li>
-      <li id="min_2" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box2-1" class="boxone"></div>
-          <div id="box2-2" class="boxtwo"></div>
-        </div>
-      </li>
-      <li id="min_3" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box3-1" class="boxone"></div>
-          <div id="box3-2" class="boxtwo"></div>
-        </div>
-      </li>
-      <li id="min_4" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box4-1" class="boxone"></div>
-          <div id="box4-2" class="boxtwo"></div>
-        </div>
-      </li>
-      <li id="min_5" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box5-1" class="boxone"></div>
-          <div id="box5-2" class="boxtwo"></div>
-        </div>
-      </li>
-      <li id="min_6" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box6-1" class="boxone"></div>
-          <div id="box6-2" class="boxtwo"></div>
-        </div>
-      </li>
-      <li id="min_7" class="mindiv" value="0">
-        <div class="divbox">
-          <a href="http://lover.herokuapp.com">
-            <div id="box7-1" class="boxone"></div>
-          </a>
-          <div id="box7-2" class="boxtwo"></div>
-        </div>
-      </li>
-      <li id="min_8" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box8-1" class="boxone"></div>
-          <a href="/apps/story/index.html">
-              <div id="box8-2" class="boxtwo"></div>
-          </a>
-        </div>
-      </li>
-      <li id="min_9" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box9-1" class="boxone"></div>
-          <a href="/apps/counter/index.html">
-              <div id="box9-2" class="boxtwo"></div>
-          </a>
-        </div>
-      </li>
-      <li id="min_10" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box10-1" class="boxone"></div>
-          <div id="box10-2" class="boxtwo"></div>
-        </div>
-      </li>
-      <li id="min_11" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box11-1" class="boxone"></div>
-          <div id="box11-2" class="boxtwo"></div>
-        </divG  </li>
-      <li id="min_12" class="mindiv" value="0">
-        <div class="divbox">
-          <div id="box12-1" class="boxone"></div>
-          <a href="/apps/about/index.html">
-            <div id="box12-2" class="boxtwo"></div>
-          </a>
-        </div>
-      </li>
     </div>
-</div>
-<div id="footer"> </div>
-<script id="jquery_183" type="text/javascript" class="library" src="js/random.js"></script>
-<script type="text/javascript">
+    <!-- ## CONTACT US MODAL POPUP begins here ## -->
+
+    <script type="text/javascript" src="assets/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.metrolite.min.2.js"></script>
+    <script type="text/javascript">
     function jsonCallback(result) {
         var len = result.length;
         var i = Math.floor(Math.random()*len);//0-23 
         document.getElementById('wordtoday').innerHTML = "["+ result[i].word + "]";
     }
+    </script>
+
+ <script type="text/javascript">
+            <!--jQuery(document).ready(function (){-->
+                    var now = new Date();
+                    var dst = new Date("2013/10/01 00:00:00");
+                    var date3 = dst.getTime() - now.getTime();
+                    var d=Math.floor(date3/(24*3600*1000)) 
+                    var leave1=date3%(24*3600*1000)    //计算天数后剩余的毫秒数  
+                    var h=Math.floor(leave1/(3600*1000))  
+                    var leave2=leave1%(3600*1000)        //计算小时数后剩余的毫秒数  
+                    var m=Math.floor(leave2/(60*1000))  
+                    var leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数  
+                    var s=Math.round(leave3/1000)  
+                    document.getElementById('numdays').innerHTML = parseInt(d);
+                    document.getElementById('numhours').innerHTML = parseInt(h);
+                    document.getElementById('nummins').innerHTML = parseInt(m);
+                    document.getElementById('numsecs').innerHTML = s;
+                    <!--)};-->
+            </script>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                        var theDaysBox  = $("#numdays");
+                        var theHoursBox = $("#numhours");
+                        var theMinsBox  = $("#nummins");
+                        var theSecsBox  = $("#numsecs");
+
+                        var refreshId = setInterval(function() {
+                            var currentSeconds = theSecsBox.text();
+                            var currentMins    = theMinsBox.text();
+                            var currentHours   = theHoursBox.text();
+                            var currentDays    = theDaysBox.text();
+
+                            if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
+                            // if everything rusn out our timer is done!!
+                            // do some exciting code in here when your countdown timer finishes
+
+                            } else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {
+                            // if the seconds and minutes and hours run out we subtract 1 day
+                            theDaysBox.html(currentDays-1);
+                            theHoursBox.html("23");
+                            theMinsBox.html("59");
+                            theSecsBox.html("59");
+                            } else if(currentSeconds == 0 && currentMins == 0) {
+                            // if the seconds and minutes run out we need to subtract 1 hour
+                            theHoursBox.html(currentHours-1);
+                            theMinsBox.html("59");
+                            theSecsBox.html("59");
+                            } else if(currentSeconds == 0) {
+                                // if the seconds run out we need to subtract 1 minute
+                                theMinsBox.html(currentMins-1);
+                                theSecsBox.html("59");
+                            } else {
+                                theSecsBox.html(currentSeconds-1);
+                            }
+                        }, 1000);
+                });
 </script>
-<script type="text/javascript" src="http://lover.herokuapp.com/pieces.json?callback=jsonCallback"></script>
-<script type="text/javascript" src="js/mysidebar.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function(){
-    <!--document.getElementById('lunar').innerHTML = getCurdayLunar();-->
-    if(isBirthday() == 1) {
-        alert("今天是Yiming的生日, 别忘了哦");
-        location.href="http://tmall.com";
-    } 
-    if(isBirthday() == 2) {
-        alert("今天是Yanting的生日, 别忘了哦");
-        location.href="http://tmall.com";
-    }
-    document.getElementById('weekday').innerHTML = '第' + getWhichWeek() + "周 ~ " + getWeekDay();
-    document.getElementById('whichday').innerHTML = "在一起" + getHowManyDays() + "天了";
-});
-    
-</script>
-<script type="text/javascript">
-    $("ul#demo_menu1").sidebar();
+    <script type="text/javascript" src="http://lover.herokuapp.com/pieces.json?callback=jsonCallback"></script>
+    <script type="text/javascript">
     jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",
         function(){
             var nj = v.find('南京').w.split("<br/>");
@@ -168,28 +265,30 @@ jQuery(document).ready(function(){
             var nj_tmp = nj[2].split(':')[1].replace('～', ' ~ ');
             var cd = v.find('成都').w.split("<br/>");
             var cd_weather = cd[1].split(':')[1];
-            <!--var cd_tmp = cd[2].split(':')[1];-->
-            document.getElementById('weather').innerHTML = nj_tmp;
-            document.getElementById('weather_nj').innerHTML = '[南京]' + nj_weather;
-            document.getElementById('weather_cd').innerHTML = '[成都]' + cd_weather;
+            var cd_tmp = cd[2].split(':')[1];
+            <!--[>document.getElementById('nj_temp').innerHTML = nj_tmp;<]-->
+            document.getElementById('nj_weather').innerHTML = nj_weather + "|";
+            <!--document.getElementById('cd_temp').innerHTML = cd_tmp;-->
+            document.getElementById('cd_weather').innerHTML = cd_weather;
     });
-
-    <!--whichDay();-->
-
     jQuery(document).ready(function() {
         var theYear = 2013;
         var mdate = new Date();
         var year  = mdate.getFullYear();
         var author = " Proudly powered by @Yiming ｡◕‿◕｡ @Yanting ";
         if (year == theYear) {
-            str = "© "+ theYear;
+            str = "&copy "+ theYear;
         }
         else if (year > theYear) {
-            str = "© " + theYear + " ~ " + year;
+            str = "&copy " + theYear + " ~ " + year;
         }
         footer =  str + author + "[ 12.21<sup>st</sup> 2012 ~ Forever ]";
-        document.getElementById('footer').innerHTML = footer;
+        document.getElementById('footerinner').innerHTML = footer;
     });
-</script>
+    </script>
+    <script type="text/javascript" src="assets/js/dater.js"></script>
+    <script type="text/javascript">
+        document.getElementById('weekday').innerHTML = '第' + getWhichWeek() + "周 ~ " + getWeekDay();
+    </script>
 </body>
 </html>

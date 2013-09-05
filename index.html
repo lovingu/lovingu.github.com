@@ -65,8 +65,8 @@
                                                 <div class="control-group">
                                                     <label class="control-label" for="txt_subscriber_email">: )</label>
                                                     <div class="controls">
-                                                        <input class="span10 input-subscribe" type="text" placeholder="enter the word you wanna know" />
-                                                        <button id="btn_subscribe" class="btn btn-submit" type="button">Go</button>
+                        <input class="span10 input-subscribe" id="wordaa" type="text" placeholder="enter the word you wanna know" />
+                            <button id="btn_subscribe" class="btn btn-submit" type="button" onclick="dictit()">Go</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -278,6 +278,12 @@
     <script type="text/javascript" src="assets/js/dater.js"></script>
     <script type="text/javascript">
         document.getElementById('weekday').innerHTML = '第' + getWhichWeek() + "周 ~ " + getWeekDay();
+    </script>
+    <script type="text/javascript">
+        function dictit() {
+            var word = document.getElementById('wordaa').value;
+            location.href = 'http://dict.cn/' + word;
+        }
     </script>
 </body>
 </html>

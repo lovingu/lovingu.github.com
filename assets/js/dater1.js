@@ -1,4 +1,4 @@
-var refresher = setInterval(function timeElapse() {
+var refresher = setInterval(function () {
     var c = new Date();
     var month = 12;
     c.setFullYear(2012, month-1, 21);

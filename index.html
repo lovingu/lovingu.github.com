@@ -260,6 +260,17 @@
     <script type="text/javascript" src="assets/js/dater.js"></script>
     <script type="text/javascript">
         document.getElementById('weekday').innerHTML = '第' + getWhichWeek() + "周 ~ " + getWeekDay();
+
+        jQuery(document).ready(function(){
+            if(isBirthday() == 1) {
+                alert("今天是Yiming的生日, 别忘了哦");
+                location.href="http://tmall.com";
+            } 
+            if(isBirthday() == 2) {
+                alert("今天是Yanting的生日, 别忘了哦");
+                location.href="http://tmall.com";
+            }
+        });
     </script>
     <script type="text/javascript">
         function dictit() {

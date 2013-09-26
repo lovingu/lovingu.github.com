@@ -7,7 +7,7 @@
 <head>
     <title>Love Home</title>
     <link rel="shortcut icon" href="/static/favicon1.png" />
-        <link type="text/css" href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link type="text/css" href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
     <link type="text/css" href="assets/css/styles2.css" rel="stylesheet" />
@@ -240,36 +240,6 @@
     </script>
     <script type="text/javascript" src="assets/js/dater1.js"> </script>
     <script type="text/javascript" src="assets/js/dater2.js"> </script>
-    <script type="text/javascript" src="assets/js/random_face.js"> </script>
-    <script type="text/javascript">
-    jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",
-        function(){
-            var nj = v.find('南京').w.split("<br/>");
-            var nj_weather = nj[1].split(':')[1];
-            var nj_tmp = nj[2].split(':')[1].replace('～', ' ~ ');
-            var cd = v.find('成都').w.split("<br/>");
-            var cd_weather = cd[1].split(':')[1];
-            var cd_tmp = cd[2].split(':')[1];
-            <!--[>document.getElementById('nj_temp').innerHTML = nj_tmp;<]-->
-            document.getElementById('nj_weather').innerHTML = nj_weather + "|";
-            <!--document.getElementById('cd_temp').innerHTML = cd_tmp;-->
-            document.getElementById('cd_weather').innerHTML = cd_weather;
-    });
-    jQuery(document).ready(function() {
-        var theYear = 2013;
-        var mdate = new Date();
-        var year  = mdate.getFullYear();
-        var author = " Proudly powered by @Yiming ｡◕‿◕｡ @Yanting ";
-        if (year == theYear) {
-            str = "&copy "+ theYear;
-        }
-        else if (year > theYear) {
-            str = "&copy " + theYear + " ~ " + year;
-        }
-        footer =  str + author + "[ 12.21<sup>st</sup> 2012 ~ Forever ]";
-        document.getElementById('footerinner').innerHTML = footer;
-    });
-    </script>
     <script type="text/javascript" src="assets/js/dater.js"></script>
     <script type="text/javascript">
         document.getElementById('weekday').innerHTML = '第' + getWhichWeek() + "周 ~ " + getWeekDay();
@@ -290,6 +260,47 @@
             var word = document.getElementById('wordaa').value;
             location.href = 'http://dict.cn/' + word;
         }
+    </script>
+    <script type="text/javascript" src="assets/js/random_face.js"> </script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch([
+          "assets/images/1.jpg",
+          "assets/images/2.jpg",
+          "assets/images/3.jpg"
+          ], {
+            fade: 750,
+            duration: 4000
+        });
+    </script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        var theYear = 2013;
+        var mdate = new Date();
+        var year  = mdate.getFullYear();
+        var author = " Proudly powered by @Yiming ｡◕‿◕｡ @Yanting ";
+        if (year == theYear) {
+            str = "&copy "+ theYear;
+        }
+        else if (year > theYear) {
+            str = "&copy " + theYear + " ~ " + year;
+        }
+        footer =  str + author + "[ 12.21<sup>st</sup> 2012 ~ Forever ]";
+        document.getElementById('footerinner').innerHTML = footer;
+    });
+    jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",
+        function(){
+            var nj = v.find('南京').w.split("<br/>");
+            var nj_weather = nj[1].split(':')[1];
+            var nj_tmp = nj[2].split(':')[1].replace('～', ' ~ ');
+            var cd = v.find('成都').w.split("<br/>");
+            var cd_weather = cd[1].split(':')[1];
+            var cd_tmp = cd[2].split(':')[1];
+            <!--[>document.getElementById('nj_temp').innerHTML = nj_tmp;<]-->
+            document.getElementById('nj_weather').innerHTML = nj_weather + "|";
+            <!--document.getElementById('cd_temp').innerHTML = cd_tmp;-->
+            document.getElementById('cd_weather').innerHTML = cd_weather;
+    });
     </script>
 </body>
 </html>

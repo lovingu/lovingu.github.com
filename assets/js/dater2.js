@@ -17,6 +17,7 @@ var refreshId = setInterval(function() {
     if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
         // if everything rusn out our timer is done!!
         // do some exciting code in here when your countdown timer finishes
+        windows.location = '/coming.html';
     } else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {
         // if the seconds and minutes and hours run out we subtract 1 day
         theDaysBox.innerHTML = String(currentDays-1);

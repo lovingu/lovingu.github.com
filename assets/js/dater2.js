@@ -14,7 +14,7 @@ var refreshId = setInterval(function() {
     var currentHours   = theHoursBox.innerHTML;
     var currentMins    = theMinsBox.innerHTML;
     var currentSeconds = theSecsBox.innerHTML;
-    if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
+    if(currentSeconds < 0 || currentMins < 0 || currentHours < 0 || currentDays < 0) {
         // if everything rusn out our timer is done!!
         // do some exciting code in here when your countdown timer finishes
         windows.location = '/coming.html';

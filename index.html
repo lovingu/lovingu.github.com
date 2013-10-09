@@ -220,7 +220,7 @@
     </script>
     <script>
         var now = new Date();
-        var dst = new Date("2013/09/30 09:23:00");
+        var dst = new Date("2014/09/30 09:23:00");
         var date3 = dst.getTime() - now.getTime();
         var d=Math.floor(date3/(24*3600*1000)) 
         var leave1=date3%(24*3600*1000)    //计算天数后剩余的毫秒数  
@@ -284,26 +284,19 @@
         footer =  str + author + "[ 12.21<sup>st</sup> 2012 ~ Forever ]";
         document.getElementById('footerinner').innerHTML = footer;
     });
-    <!--jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",-->
-        <!--function(){-->
-            <!--var nj = v.find('南京').w.split("<br/>");-->
-            <!--var nj_weather = nj[1].split(':')[1];-->
-            <!--var nj_tmp = nj[2].split(':')[1].replace('～', ' ~ ');-->
-            <!--var cd = v.find('成都').w.split("<br/>");-->
-            <!--var cd_weather = cd[1].split(':')[1];-->
-            <!--var cd_tmp = cd[2].split(':')[1];-->
+    jQuery.getScript("http://weather.news.qq.com/js/gn_24.js",
+        function(){
+            var nj = v.find('南京').w.split("<br/>");
+            var nj_weather = nj[1].split(':')[1];
+            var nj_tmp = nj[2].split(':')[1].replace('～', ' ~ ');
+            var cd = v.find('成都').w.split("<br/>");
+            var cd_weather = cd[1].split(':')[1];
+            var cd_tmp = cd[2].split(':')[1];
             <!--[>[>document.getElementById('nj_temp').innerHTML = nj_tmp;<]<]-->
-            <!--document.getElementById('nj_weather').innerHTML = nj_weather + "|";-->
+            document.getElementById('nj_weather').innerHTML = nj_weather + "|";
             <!--[>document.getElementById('cd_temp').innerHTML = cd_tmp;<]-->
-            <!--document.getElementById('cd_weather').innerHTML = cd_weather;-->
-    <!--});-->
+            document.getElementById('cd_weather').innerHTML = cd_weather;
+    });
     </script>
-    <script type="text/javascript">
-    function jsonWeather(result) {
-        var icon = result['weather']['icon'];
-        document.getElementById('cd_weather').innerHTML = '<img src="' + icon + '"' + ' alt="">'
-    }
-    </script>
-    <script type="text/javascript" src="http://api.openweathermap.org/data/2.5/weather?q=Chengdu,cn&callback=jsonWeather">
 </body>
 </html>
